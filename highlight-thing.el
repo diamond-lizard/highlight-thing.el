@@ -249,7 +249,8 @@ functionality."
 ;;;###autoload
 (define-minor-mode highlight-thing-mode
   "Minor mode that highlights things at point"
-  nil " hlt" nil
+  :init-value nil
+  :lighter " hlt"
   :group 'highlight-thing
   (if highlight-thing-mode
       (highlight-thing-schedule-timer)
